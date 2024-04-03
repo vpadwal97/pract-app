@@ -1376,3 +1376,17 @@ footer {
   z-index: 9999;
   /* Ensure cursor is on top of other elements */
 }
+
+
+.scroll1, .scroll2{width: 100%;border: none 0px RED;overflow-x: scroll;overflow-y:hidden;}
+.scroll1{height: 20px; }
+.scrl1 {height: 20px;width:2230px;}
+.scrl2 {width:2230px;overflow: auto;}
+
+.MuiTableContainer-root {
+  min-width: max-content;
+}
+
+.MuiPaper-root {
+  min-width: max-content;
+}

@@ -18,12 +18,17 @@ import Navi from "../pages/chat/Navi.jsx";
 import OmsStateMachine from "../pages/chat/oms/OmsStateMachine/OmsStateMachine.jsx";
 import SearchStateMasterDefinition from "../pages/chat/oms/OmsStateMachine/statusMasterDefinition/SearchStateMasterDefinition.jsx";
 import CreateEditStateMasterDefinition from "../pages/chat/oms/OmsStateMachine/statusMasterDefinition/CreateEditStateMasterDefinition.jsx";
+import MaterialTable from "../pages/MaterialTable.jsx";
 
 const Routing = createBrowserRouter([
   {
     path: "/",
     element: <> <Home /> </>,
     children: [
+      {
+        path:"/MaterialTable",
+        element: <MaterialTable />
+      },
       {
         path: "/Navi",
         element: <Navi />,

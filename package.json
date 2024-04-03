@@ -1,7 +1,7 @@
 {
   "name": "pract-app",
   "version": "0.1.0",
-  "homepage": "https://vpadwal97.github.com/pract-app",
+  "homepage": "https://vpadwal97.github.io/pract-app",
   "private": true,
   "dependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",

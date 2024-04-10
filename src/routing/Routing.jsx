@@ -13,18 +13,37 @@ import IpApp from "../pages/chat/IpApp";
 import FlowCustome from "../pages/flowChart/FlowCustome";
 import FlowChartPgae from "../pages/flowChart/FlowChartPgae";
 import MyComponent from "../pages/flowChart/MyComponent";
-import Tp from "../pages/chat/Tp.jsx";
+import Tps from "../pages/chat/Tps.jsx";
 import Navi from "../pages/chat/Navi.jsx";
 import OmsStateMachine from "../pages/chat/oms/OmsStateMachine/OmsStateMachine.jsx";
 import SearchStateMasterDefinition from "../pages/chat/oms/OmsStateMachine/statusMasterDefinition/SearchStateMasterDefinition.jsx";
 import CreateEditStateMasterDefinition from "../pages/chat/oms/OmsStateMachine/statusMasterDefinition/CreateEditStateMasterDefinition.jsx";
 import MaterialTable from "../pages/MaterialTable.jsx";
+import MultipleSelectChip from "../pages/MultipleSelectChip.jsx";
+import ChipsS from "../pages/ChipsS.jsx";
+import Tp from "../pages/chat/Tp.jsx";
 
 const Routing = createBrowserRouter([
   {
     path: "/",
     element: <> <Home /> </>,
     children: [
+      // 
+
+      
+      {
+        path:"/ChipsS",
+        element: <ChipsS />
+      },
+      {
+        path:"/Tp",
+        element: <Tp />
+      },
+      
+      {
+        path:"/MultipleSelectChip",
+        element: <MultipleSelectChip />
+      },
       {
         path:"/MaterialTable",
         element: <MaterialTable />
@@ -68,8 +87,8 @@ const Routing = createBrowserRouter([
         element: <ChatRoom />,
       },
       {
-        path: "/Tp",
-        element: <Tp />,
+        path: "/Tps",
+        element: <Tps />,
       },
       {
         path: "/MyComponent",

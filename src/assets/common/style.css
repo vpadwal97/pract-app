@@ -1380,8 +1380,8 @@ footer {
 
 .scroll1, .scroll2{width: 100%;border: none 0px RED;overflow-x: scroll;overflow-y:hidden;}
 .scroll1{height: 20px; }
-.scrl1 {height: 20px;width:2230px;}
-.scrl2 {width:2230px;overflow: auto;}
+.scrl1 {height: 20px;}
+.scrl2 {width:max-content;overflow: auto;}
 
 .MuiTableContainer-root {
   min-width: max-content;
@@ -1389,4 +1389,46 @@ footer {
 
 .MuiPaper-root {
   min-width: max-content;
+}
+
+
+
+.css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root.Mui-selected {
+  background-color: rgb(0, 128, 255)!important;
+  color: white!important;
+}
+.css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root.Mui-selected:hover {
+  background-color: rgb(33 176 244 / 64%)!important;
+}
+.css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root:hover {
+  background-color: rgb(0 128 255 / 71%)!important;
+  color: white!important;
+}
+.MuiFormControl-root.select_shadow.form-floating label.MuiFormLabel-root{
+  position: absolute !important;
+  top: calc(50% - 15px)!important;
+  left: 14px !important;
+  color: darkgray!important;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 14px !important;
+  line-height: 18px !important;
+  background-color: #F6F6F6 !important;
+  padding: 4px 4px 4px 4px !important;
+  transform: none !important;
+  /* pointer-events: auto; */
+  transition: top 0.3s ease, font-size 0.3s ease, color 0.3s ease !important;
+}
+
+.MuiFormControl-root.select_shadow.form-floating label.MuiInputLabel-shrink.MuiFormLabel-root{
+  top: -9px !important;
+  color: #2196f3 !important;
+  /* left: 14px !important; */
+  /* transform: none !important;
+  pointer-events: auto; */
+
+
+}
+.MuiFormControl-root.select_shadow fieldset.MuiOutlinedInput-notchedOutline{
+  display: none;
 }

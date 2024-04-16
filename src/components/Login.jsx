@@ -1,53 +1,46 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from "react";
+
+const url = "https://api.quotable.io/random";
 
 const Login = () => {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-  const [loggedIn, setLoggedIn] = useState(false);
+  const [quotes, setQuotes] = useState({});
+  const [responses, setresponses] = useState({});
 
-  const handleLogin = () => {
-    // Perform authentication (e.g., send request to server)
-    // For simplicity, let's assume authentication is successful
-    // You can replace this with actual authentication logic
-
-    // Simulate successful authentication
-    if (username === 'Octashop' && password === 'Octashop@123') {
-      setLoggedIn(true);
-    } else {
-      alert('Invalid username or password');
-    }
+  //Fetch Quotes from API
+  const getQuote = () => {
+    fetch(url)
+      .then((response) => response.json())
+      .then((data) => setQuotes(data));
   };
 
-  const handleLogout = () => {
-    // Log out the user
-    setLoggedIn(false);
+  useEffect(() => {
+    getQuote();
+  }, []);
+
+  const getNewQuote = () => {
+    getQuote();
   };
 
+  // const tweetQuote = () => {
+  //   const twitterUrl = `https://twitter.com/intent/tweet?text=${quotes.content} - ${quotes.author}`;
+  //   window.open(twitterUrl, "_blank");
+  // };
+
+  const { content, author } = quotes;
   return (
-    <div>
-      {loggedIn ? (
-        <div>
-          <h1>Welcome, {username}!</h1>
-          <button onClick={handleLogout}>Logout</button>
+    <div className="box-centerside">
+      <div className="text">
+        <p>{content}</p>
+      </div>
+      <div className="author">
+        <h5>{author}</h5>
+        <div className="button-container">
+          {/* <button className="twitter-button" onClick={tweetQuote}>
+            <i className="fab fa-twitter">fab fa-twitter</i>
+          </button> */}
+          <button onClick={getNewQuote}>New Quote</button>
         </div>
-      ) : (
-        <div>
-          <h1>Login</h1>
-          <input
-            type="text"
-            placeholder="Username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-          />
-          <input
-            type="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-          <button onClick={handleLogin}>Login</button>
-        </div>
-      )}
+      </div>
     </div>
   );
 };

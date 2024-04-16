@@ -22,6 +22,9 @@ import MaterialTable from "../pages/MaterialTable.jsx";
 import MultipleSelectChip from "../pages/MultipleSelectChip.jsx";
 import ChipsS from "../pages/ChipsS.jsx";
 import Tp from "../pages/chat/Tp.jsx";
+import DnDFlow from "../pages/orderStateTransition/DnDFlow.jsx";
+import CreateOrderStateTransition from "../pages/orderStateTransition/CreateEditOrderTransition.jsx";
+import SearchOmsOrderStateTransition from "../pages/orderStateTransition/SearchOmsOrderStateTransition.jsx";
 
 const Routing = createBrowserRouter([
   {
@@ -30,10 +33,23 @@ const Routing = createBrowserRouter([
     children: [
       // 
 
+      {
+        path: "/orderStateTransition",
+        element: <OmsStateMachine />,
+        children: [
+          {path:"createOrderStateTransition",element:<CreateOrderStateTransition/>},
+          {path:"SearchOmsOrderStateTransition",element:<SearchOmsOrderStateTransition/>},
+        ],
+      },
       
       {
         path:"/ChipsS",
         element: <ChipsS />
+      },
+      
+      {
+        path:"/DnDFlow",
+        element: <DnDFlow />
       },
       {
         path:"/Tp",

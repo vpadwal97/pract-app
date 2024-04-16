@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Outlet } from "react-router-dom";
 import Input from "../components/Input";
-import SelectComponent from "../components/Select";
+import SelectComponent from "../components/SelectComponent";
 // import Select from "../components/select2";
 // import Scrollbars from "../components/Scrollbars";
 

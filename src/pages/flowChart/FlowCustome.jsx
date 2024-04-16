@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Flowchart from "react-simple-flowchart";
-import SelectComponent from "../../components/Select";
+import SelectComponent from "../../components/SelectComponent";
 
 const FlowCustome = () => {
   const [optionsList, setoptiOnsList] = useState({});

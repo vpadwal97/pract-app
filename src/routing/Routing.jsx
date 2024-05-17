@@ -25,6 +25,9 @@ import Tp from "../pages/chat/Tp.jsx";
 import DnDFlow from "../pages/orderStateTransition/DnDFlow.jsx";
 import CreateOrderStateTransition from "../pages/orderStateTransition/CreateEditOrderTransition.jsx";
 import SearchOmsOrderStateTransition from "../pages/orderStateTransition/SearchOmsOrderStateTransition.jsx";
+import ErrorExample from "../pages/ErrorExample.jsx";
+import ColorPage from "../pages/ColorPage.jsx";
+import InvoiceDocument from "../pages/InvoiceDocument.jsx";
 
 const Routing = createBrowserRouter([
   {
@@ -33,6 +36,18 @@ const Routing = createBrowserRouter([
     children: [
       // 
 
+      {
+        path:"/colorPage",
+        element: <ColorPage />
+      },
+      {
+        path:"/InvoiceDocument",
+        element: <InvoiceDocument />
+      },
+      {
+        path:"/ErrorExample",
+        element: <ErrorExample />
+      },
       {
         path: "/orderStateTransition",
         element: <OmsStateMachine />,

@@ -56,3 +56,13 @@
     }
   }
   
+
+
+  /* :root {
+    --primary-color: #000000; // Default color
+  } */
+  
+  .sample-div {
+    color: var(--primary-color); /* Use the CSS variable */
+  }
+  

@@ -1,3 +1,7 @@
+:root{
+  --primary-color: #2196F3;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -179,7 +183,7 @@ a:hover {
 }
 
 .profile {
-  color: #2196F3;
+  color: var(--primary-color);
 }
 
 .profile {
@@ -218,7 +222,7 @@ a:hover {
   scrollbar-width: thin;
   scrollbar-color: #005BA4 transparent;
   box-shadow: 0px 0px 20px rgba(1, 41, 112, 0.1);
-  background-color: #2196F3;
+  background-color: var(--primary-color);
 }
 
 .sidebar.active {
@@ -416,16 +420,16 @@ a:hover {
 
 .btn-primary:hover,
 .bg-cBlue {
-  background-color: #2196f3;
+  background-color: var(--primary-color);
 }
 
 .contact {
-  border: 2px solid #2196F3;
+  border: 2px solid var(--primary-color);
   padding: 35px
 }
 
 .box h3 {
-  color: #2196F3;
+  color: var(--primary-color);
   font-weight: 700;
   top: -53px;
   position: absolute;
@@ -658,7 +662,7 @@ select.form-select {
 .form-group input[type='color']:not(:placeholder-shown)+label,
 .form-group input[type='password']:not(:placeholder-shown)+label,
 .form-group textarea:not(:placeholder-shown)+label {
-  color: #2196f3 !important;
+  color: var(--primary-color) !important;
 }
 
 
@@ -742,7 +746,7 @@ select.form-select {
 }
 
 .switch input:checked~small {
-  background: #2196F3;
+  background: var(--primary-color);
   transition: .3s;
 }
 
@@ -826,11 +830,11 @@ select.form-select {
 }
 
 .border-cPrimary {
-  border-color: #2196f3 !important;
+  border-color: var(--primary-color) !important;
 }
 
 .text-cPrimary {
-  color: #2196f3 !important;
+  color: var(--primary-color) !important;
 }
 
 .vertical-align-middle {
@@ -852,8 +856,8 @@ select.form-select {
 
 .alert-proj {
   color: #005497;
-  background-color: #2196f378;
-  border-color: #2196f3;
+  background-color: var(--primary-color)78;
+  border-color: var(--primary-color);
 }
 
 .long-con {
@@ -863,7 +867,7 @@ select.form-select {
 .circle-con {
   height: 64px;
   width: 64px;
-  background: #2196f3 !important;
+  background: var(--primary-color) !important;
 }
 
 .text-cGreen {
@@ -995,7 +999,7 @@ select.form-select {
 }
 
 .btn-nav {
-  background-color: #2196f3;
+  background-color: var(--primary-color);
 }
 
 .btn-nav.active,
@@ -1020,7 +1024,7 @@ select.form-select {
 
 .btn-nav:After {
   right: -24px;
-  border-left: 25px solid #2196f3;
+  border-left: 25px solid var(--primary-color);
   z-index: 2;
 }
 
@@ -1192,7 +1196,7 @@ textarea.input-shadow[disabled] {
   height: 64px;
   width: 64px;
   animation: rotate 0.8s infinite linear;
-  border: 5px solid #2196f3;
+  border: 5px solid var(--primary-color);
   border-right-color: transparent;
   border-radius: 50%;
   position: absolute;
@@ -1259,7 +1263,7 @@ footer {
 }
 
 .subCategoryInput~label {
-  color: #2196f3;
+  color: var(--primary-color);
 }
 
 .subSubCategoryInput~label {
@@ -1422,7 +1426,7 @@ footer {
 
 .MuiFormControl-root.select_shadow.form-floating label.MuiInputLabel-shrink.MuiFormLabel-root{
   top: -9px !important;
-  color: #2196f3 !important;
+  color: var(--primary-color) !important;
   /* left: 14px !important; */
   /* transform: none !important;
   pointer-events: auto; */
@@ -1431,4 +1435,31 @@ footer {
 }
 .MuiFormControl-root.select_shadow fieldset.MuiOutlinedInput-notchedOutline{
   display: none;
+}
+
+
+
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #d1e8ff;
+}
+
+.download-button {
+  display: inline-block;
+  background-color: #5a8fd5;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 12px 24px;
+  border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.download-button:hover {
+  background-color: #3a68b7;
 }

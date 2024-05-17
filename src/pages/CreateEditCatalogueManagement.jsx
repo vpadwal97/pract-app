@@ -3,15 +3,15 @@ import { useState } from 'react';
 import { Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
-import FormGroup from '../../../../forms/FormGroup';
-import axios from "../../../../util/HttpServices";
-import FormGroupRadio from '../../../../forms/FormGroupRadio';
-import SelectComponent from '../../../../forms/SelectComponent';
-import "../../../../css/Style.css";
+import Input from '../components/Input.jsx';
+// import axios from "../../../../util/HttpServices";
+import InputRadio from '../../../../forms/InputRadio';
+import SelectComponent from '../components/SelectComponent';
+// import "../../../../css/Style.css";
 import { useTheme } from '@mui/material/styles';
 import { FormControl, InputLabel, MenuItem, OutlinedInput, Select } from '@mui/material';
-import { TooltipMessages } from '../../../constants/TooltipConstants';
-import NewMultiSelectDropDown from '../../../../forms/NewMultiSelectDropDown.jsx';
+// import { TooltipMessages } from '../../../constants/TooltipConstants';
+// import NewMultiSelectDropDown from '../../../../forms/NewMultiSelectDropDown.jsx';
 
 
 const CreateEditCatalogueManagement = () => {
@@ -279,15 +279,15 @@ const CreateEditCatalogueManagement = () => {
               <Form encType="multipart/form-data" className="px-3" >
                 <div className="row">
                   <div className={`col-md-4 mt-3 ${action === 'edit' ? '' : 'd-none'}`}>
-                    <FormGroup type="text" placeholder="" label='Internal System Id' tooltipMessage={cecm.internalSystemId} value={internalSystemId} onChange={(e) => setinternalSystemId(e.target.value)} disabled /></div>
-                  <div className="col-md-4 mt-3"><FormGroup type="text" label="Catalogue Name" placeholder="" tooltipMessage={cecm.catalogueName} value={catalogueName} onChange={(e) => setCatalogueName(e.target.value)} /></div>
-                  <div className="col-md-4 mt-3"><FormGroup disabled={catalogueCodeDistatus} type="text" label="Catalogue Code" placeholder="" tooltipMessage={cecm.catalogueCode} value={catalogueCode} onChange={(e) => setCatalogueCode(e.target.value)} /></div>
-                  <div className="col-md-4 mt-3"><FormGroup type="text" label="Catalogue Title" placeholder="" tooltipMessage={cecm.catalogueTitle} value={catalogueTitle} onChange={(e) => setCatalogueTitle(e.target.value)} /></div>
-                  <div className="col-md-4 mt-3"><FormGroup type="text" label="Catalogue Description" placeholder="" tooltipMessage={cecm.catalogueDescription} value={catalogueDescription} onChange={(e) => setCatalogueDescription(e.target.value)} /></div>
-                  <div className="col-md-4 mt-3"><FormGroup type="text" label="Meta Keyword Description" placeholder="" tooltipMessage={cecm.metaKeywordDescription} value={metaKeywordDescription} onChange={(e) => setMetaKeywordDescription(e.target.value)} /></div>
+                    <Input type="text" placeholder="" label='Internal System Id' tooltipMessage={cecm.internalSystemId} value={internalSystemId} onChange={(e) => setinternalSystemId(e.target.value)} disabled /></div>
+                  <div className="col-md-4 mt-3"><Input type="text" label="Catalogue Name" placeholder="" tooltipMessage={cecm.catalogueName} value={catalogueName} onChange={(e) => setCatalogueName(e.target.value)} /></div>
+                  <div className="col-md-4 mt-3"><Input disabled={catalogueCodeDistatus} type="text" label="Catalogue Code" placeholder="" tooltipMessage={cecm.catalogueCode} value={catalogueCode} onChange={(e) => setCatalogueCode(e.target.value)} /></div>
+                  <div className="col-md-4 mt-3"><Input type="text" label="Catalogue Title" placeholder="" tooltipMessage={cecm.catalogueTitle} value={catalogueTitle} onChange={(e) => setCatalogueTitle(e.target.value)} /></div>
+                  <div className="col-md-4 mt-3"><Input type="text" label="Catalogue Description" placeholder="" tooltipMessage={cecm.catalogueDescription} value={catalogueDescription} onChange={(e) => setCatalogueDescription(e.target.value)} /></div>
+                  <div className="col-md-4 mt-3"><Input type="text" label="Meta Keyword Description" placeholder="" tooltipMessage={cecm.metaKeywordDescription} value={metaKeywordDescription} onChange={(e) => setMetaKeywordDescription(e.target.value)} /></div>
                   <div className="col-md-4 mt-3"><SelectComponent placeholder="Channel" tooltipMessage={cecm.channelDataSelect} selectedOption={channelDataSelect} onChange={(e) => setChannelDataSelect(e.target.value)} dropdownlist={channelData} /></div>
                   <div className="col-md-4 mt-3"><SelectComponent placeholder="Business Theme" tooltipMessage={cecm.businessThemeSelect} selectedOption={businessThemeSelect} onChange={(e) => setBusinessThemeDataSelect(e.target.value)} dropdownlist={businessThemeData} /></div>
-                  <div className="col-md-4 mt-3">
+                  {/* <div className="col-md-4 mt-3">
                       <NewMultiSelectDropDown dropdownlist={paymentModeData}
                        label="Payment Mode " 
                        selectedValues={payModeSelectData} 
@@ -303,8 +303,8 @@ const CreateEditCatalogueManagement = () => {
                             onSelect={handleChange}  
                             onRemove={removeResValueSelect} 
                         /> 
-                    </div>
-                  <div className="col-md-4 mt-2"><FormGroupRadio title="Active" tooltipMessage={cecm.isactive} value={isactive} onChange={() => setIsActive(!isactive)} checked={isactive} /></div>
+                    </div> */}
+                  <div className="col-md-4 mt-2"><InputRadio title="Active" tooltipMessage={cecm.isactive} value={isactive} onChange={() => setIsActive(!isactive)} checked={isactive} /></div>
                  <div className="buttons d-flex justify-content-end p-1">
                     <div className="btns">
                       <a className="submit-btn btn-sm m-2 px-5 py-1 text-white rounded-3 me-2" onClick={() => onSubmit(editedData.catalogueRfnum)}>Save</a>

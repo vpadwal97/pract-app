@@ -29,6 +29,11 @@ const Routes = [
           //   name: "Variable Update",
           // },
           {
+            path: "ErrorExample",
+            name: "Error Example",
+          },
+
+          {
             path: "orderStateTransition/SearchOmsOrderStateTransition",
             name: "Order State Transition",
           },

@@ -3,6 +3,7 @@ import { FaBars } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import Routes from "./Routes";
+import Location from "./Location";
 
 const Aside = () => {
   
@@ -103,6 +104,7 @@ const Aside = () => {
         </ul>
       </aside>
       <main className={isOpen ? 'main active' : 'main'}>
+        <Location />
         <Outlet style={{ marginTop: "20px" }} />
       </main>
     </>

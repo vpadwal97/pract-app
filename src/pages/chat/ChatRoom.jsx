@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import io from "socket.io-client";
 
-const socket = io("http://192.168.58.42:3001");
+const socket = io("http://192.168.58.42:3002");
 
 function ChatRoom() {
   const [roomId, setRoomId] = useState("");

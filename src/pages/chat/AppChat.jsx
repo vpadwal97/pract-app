@@ -4,7 +4,7 @@ import io from "socket.io-client";
 // import { Button } from "react-bootstrap";
 import axios from "axios";
 
-const socket = io("http://192.168.58.42:3001"); // Replace with your server address
+const socket = io("http://192.168.58.42:3002"); // Replace with your server address
 
 function AppChat() {
   let [messages, setMessages] = useState([]);

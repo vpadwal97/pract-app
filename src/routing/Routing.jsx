@@ -28,61 +28,97 @@ import SearchOmsOrderStateTransition from "../pages/orderStateTransition/SearchO
 import ErrorExample from "../pages/ErrorExample.jsx";
 import ColorPage from "../pages/ColorPage.jsx";
 import InvoiceDocument from "../pages/InvoiceDocument.jsx";
+// import CustomOwlCarousel from "../pages/CustomOwlCarousel.jsx";
+import CarouselComponent from "../pages/CarouselComponent.jsx";
+import ProductList from "../pages/ProductList.jsx";
+import ProductDetail from "../pages/ProductDetail.jsx";
+import MultiRange from "../pages/MultiRange.jsx";
+import GradientIcons from "../components/GradientIcons.jsx";
+// import IV from "../pages/IV.jsx";
 
 const Routing = createBrowserRouter([
   {
     path: "/",
-    element: <> <Home /> </>,
+    element: (
+      <>
+        {" "}
+        <Home />{" "}
+      </>
+    ),
     children: [
-      // 
+      // CustomOwlCarousel CarouselComponent
 
+      // {
+      //   path:"/CustomOwlCarousel",
+      //   element: <CustomOwlCarousel />
+      // },
+      // {
+
+      { path: "/MultiRange", element:<MultiRange /> },
+      { path: "/SearchPage", element:<ProductList /> },
+      { path: "/product/:id", element:<ProductDetail /> },
+      { path: "GradientIcons", element:<GradientIcons /> },
       {
-        path:"/colorPage",
-        element: <ColorPage />
+        path: "/CarouselComponent",
+        element: <CarouselComponent />,
       },
       {
-        path:"/InvoiceDocument",
-        element: <InvoiceDocument />
+        path: "/colorPage",
+        element: <ColorPage />,
       },
       {
-        path:"/ErrorExample",
-        element: <ErrorExample />
+        path: "/InvoiceDocument",
+        element: <InvoiceDocument />,
+      },
+      {
+        path: "/ErrorExample",
+        element: <ErrorExample />,
       },
       {
         path: "/orderStateTransition",
         element: <OmsStateMachine />,
         children: [
-          {path:"createOrderStateTransition",element:<CreateOrderStateTransition/>},
-          {path:"SearchOmsOrderStateTransition",element:<SearchOmsOrderStateTransition/>},
+          {
+            path: "createOrderStateTransition",
+            element: <CreateOrderStateTransition />,
+          },
+          {
+            path: "SearchOmsOrderStateTransition",
+            element: <SearchOmsOrderStateTransition />,
+          },
         ],
       },
-      
+
       {
-        path:"/ChipsS",
-        element: <ChipsS />
+        path: "/ChipsS",
+        element: <ChipsS />,
       },
-      
+
       {
-        path:"/DnDFlow",
-        element: <DnDFlow />
-      },
-      {
-        path:"/Tp",
-        element: <Tp />
-      },
-      
-      {
-        path:"/MultipleSelectChip",
-        element: <MultipleSelectChip />
+        path: "/DnDFlow",
+        element: <DnDFlow />,
       },
       {
-        path:"/MaterialTable",
-        element: <MaterialTable />
+        path: "/Tp",
+        element: <Tp />,
+      },
+
+      {
+        path: "/MultipleSelectChip",
+        element: <MultipleSelectChip />,
+      },
+      {
+        path: "/MaterialTable",
+        element: <MaterialTable />,
       },
       {
         path: "/Navi",
         element: <Navi />,
       },
+      // {
+      //   path: "/IV",
+      //   element: <IV />,
+      // },
       {
         path: "/Tooltippage",
         element: <Tooltippage />,
@@ -90,7 +126,6 @@ const Routing = createBrowserRouter([
       {
         path: "/Login",
         element: <Login />,
-        
       },
       {
         path: "/forms",
@@ -105,13 +140,18 @@ const Routing = createBrowserRouter([
 
       {
         path: "/OmsStateMachine",
-        element: <OmsStateMachine/>,
+        element: <OmsStateMachine />,
         children: [
-            { path: "SearchStateMasterDefinition", element: <SearchStateMasterDefinition/>},
-            { path: "CreateEditStateMasterDefinition", element: <CreateEditStateMasterDefinition/>},
-            
-        ], 
-    },
+          {
+            path: "SearchStateMasterDefinition",
+            element: <SearchStateMasterDefinition />,
+          },
+          {
+            path: "CreateEditStateMasterDefinition",
+            element: <CreateEditStateMasterDefinition />,
+          },
+        ],
+      },
 
       {
         path: "/ChatRoom",
@@ -133,10 +173,14 @@ const Routing = createBrowserRouter([
         path: "/Appchat",
         element: <AppChat />,
       },
-      
+
       {
         path: "/FlowCharts",
-        element: <><b>FlowCharts</b> <Outlet/></>,
+        element: (
+          <>
+            <b>FlowCharts</b> <Outlet />
+          </>
+        ),
         children: [
           {
             path: "FlowCustome",

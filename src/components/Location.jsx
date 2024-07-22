@@ -32,7 +32,7 @@ function Location() {
       const data = await response.json();
       
       
-      if (data.status == "OK") {
+      if (data.status === "OK") {
         const result = data.results[0];
         console.log('result--',result.address_components[9].long_name);
             const postalCode = result.address_components[9].long_name;

@@ -79,9 +79,9 @@ const CreateOrderStateTransition = () => {
       data: {
         label:
           state &&
-          stateData.filter((states) => states.optionValue == state)[0]
+          stateData.filter((states) => states.optionValue === state)[0]
             .optionLabel
-            ? stateData.filter((states) => states.optionValue == state)[0]
+            ? stateData.filter((states) => states.optionValue === state)[0]
                 .optionLabel
             : "",
       },
@@ -116,9 +116,9 @@ const CreateOrderStateTransition = () => {
   //     data: {
   //       label:
   //         state &&
-  //         stateData.filter((states) => states.optionValue == state)[0]
+  //         stateData.filter((states) => states.optionValue === state)[0]
   //           .optionLabel
-  //           ? stateData.filter((states) => states.optionValue == state)[0]
+  //           ? stateData.filter((states) => states.optionValue === state)[0]
   //               .optionLabel
   //           : "",
   //     },
@@ -212,9 +212,9 @@ const CreateOrderStateTransition = () => {
       data: {
         label:
           state &&
-          stateData.filter((states) => states.optionValue == state)[0]
+          stateData.filter((states) => states.optionValue === state)[0]
             .optionLabel
-            ? stateData.filter((states) => states.optionValue == state)[0]
+            ? stateData.filter((states) => states.optionValue === state)[0]
                 .optionLabel
             : "",
       },

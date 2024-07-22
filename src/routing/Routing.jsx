@@ -41,23 +41,14 @@ const Routing = createBrowserRouter([
     path: "/",
     element: (
       <>
-        {" "}
-        <Home />{" "}
+        <Home />
       </>
     ),
     children: [
-      // CustomOwlCarousel CarouselComponent
-
-      // {
-      //   path:"/CustomOwlCarousel",
-      //   element: <CustomOwlCarousel />
-      // },
-      // {
-
-      { path: "/MultiRange", element:<MultiRange /> },
-      { path: "/SearchPage", element:<ProductList /> },
-      { path: "/product/:id", element:<ProductDetail /> },
-      { path: "GradientIcons", element:<GradientIcons /> },
+      { path: "/MultiRange", element: <MultiRange /> },
+      { path: "/SearchPage", element: <ProductList /> },
+      { path: "/product/:id", element: <ProductDetail /> },
+      { path: "GradientIcons", element: <GradientIcons /> },
       {
         path: "/CarouselComponent",
         element: <CarouselComponent />,
@@ -74,20 +65,20 @@ const Routing = createBrowserRouter([
         path: "/ErrorExample",
         element: <ErrorExample />,
       },
-      {
-        path: "/orderStateTransition",
-        element: <OmsStateMachine />,
-        children: [
-          {
-            path: "createOrderStateTransition",
-            element: <CreateOrderStateTransition />,
-          },
-          {
-            path: "SearchOmsOrderStateTransition",
-            element: <SearchOmsOrderStateTransition />,
-          },
-        ],
-      },
+      // {
+      //   path: "/orderStateTransition",
+      //   element: <OmsStateMachine />,
+      //   children: [
+      //     {
+      //       path: "createOrderStateTransition",
+      //       element: <CreateOrderStateTransition />,
+      //     },
+      //     {
+      //       path: "SearchOmsOrderStateTransition",
+      //       element: <SearchOmsOrderStateTransition />,
+      //     },
+      //   ],
+      // },
 
       {
         path: "/ChipsS",
@@ -130,28 +121,22 @@ const Routing = createBrowserRouter([
       {
         path: "/forms",
         element: <Forms />,
-        // children: [{ path: "/ts", element: <>ts</> }],
       },
-      // {
-      //   path: "/chatComponent",
-      //   element: <ChatComponent />,
-      //   // children: [{ path: "/ts", element: <>ts</> }],
-      // },
 
-      {
-        path: "/OmsStateMachine",
-        element: <OmsStateMachine />,
-        children: [
-          {
-            path: "SearchStateMasterDefinition",
-            element: <SearchStateMasterDefinition />,
-          },
-          {
-            path: "CreateEditStateMasterDefinition",
-            element: <CreateEditStateMasterDefinition />,
-          },
-        ],
-      },
+      // {
+      //   path: "/OmsStateMachine",
+      //   element: <OmsStateMachine />,
+      //   children: [
+      //     {
+      //       path: "SearchStateMasterDefinition",
+      //       element: <SearchStateMasterDefinition />,
+      //     },
+      //     {
+      //       path: "CreateEditStateMasterDefinition",
+      //       element: <CreateEditStateMasterDefinition />,
+      //     },
+      //   ],
+      // },
 
       {
         path: "/ChatRoom",

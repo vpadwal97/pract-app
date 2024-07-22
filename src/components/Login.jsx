@@ -4,7 +4,7 @@ const url = "https://api.quotable.io/random";
 
 const Login = () => {
   const [quotes, setQuotes] = useState({});
-  const [responses, setresponses] = useState({});
+  // const [responses, setresponses] = useState({});
 
   //Fetch Quotes from API
   const getQuote = () => {

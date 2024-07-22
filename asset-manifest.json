@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/pract-app/static/css/main.1884fb52.css",
-    "main.js": "/pract-app/static/js/main.84296288.js",
+    "main.js": "/pract-app/static/js/main.cb9bb05f.js",
     "static/js/453.c79dad49.chunk.js": "/pract-app/static/js/453.c79dad49.chunk.js",
     "static/media/cms.png": "/pract-app/static/media/cms.0b053d6e64c7ac82ea81.png",
     "static/media/octashopLogo.png": "/pract-app/static/media/octashopLogo.aca095da0618c341a2cd.png",
@@ -11,11 +11,11 @@
     "static/media/slick.woff": "/pract-app/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/pract-app/index.html",
     "main.1884fb52.css.map": "/pract-app/static/css/main.1884fb52.css.map",
-    "main.84296288.js.map": "/pract-app/static/js/main.84296288.js.map",
+    "main.cb9bb05f.js.map": "/pract-app/static/js/main.cb9bb05f.js.map",
     "453.c79dad49.chunk.js.map": "/pract-app/static/js/453.c79dad49.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1884fb52.css",
-    "static/js/main.84296288.js"
+    "static/js/main.cb9bb05f.js"
   ]
 }

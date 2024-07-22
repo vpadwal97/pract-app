@@ -1,6 +1,7 @@
 import { NavLink, Outlet } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useLocation } from "react-router-dom";
 import Routes from "./Routes";
 import Location from "./Location";
@@ -11,7 +12,7 @@ const Aside = () => {
   const location = useLocation();
   const [openedSection, setOpenedSection] = useState(null);
   const [openedSubSection, setOpenedSubSection] = useState(null);
-  const [activeLink, setActiveLink] = useState(null);
+  // const [activeLink, setActiveLink] = useState(null);
 
   const handleSectionToggle = (sectionName, subSectionName) => {
     if (openedSection === sectionName && openedSubSection === subSectionName) {
@@ -26,7 +27,7 @@ const Aside = () => {
   };
   const toggle = () => {
     setIsOpen(!isOpen);
-    setActiveLink(null);
+    // setActiveLink(null);
   };
 
 

@@ -5,7 +5,7 @@ const ColorPicker = () => {
   const rootStyles = getComputedStyle(document.documentElement);
   const primaryColor = rootStyles.getPropertyValue("--primary-color");
   const [color, setColor] = useState(primaryColor); // Initial color
-  const [disp, setdisp] = useState(false); // Initial color
+  // const [disp, setdisp] = useState(false); // Initial color
   
 
   const handleChange = (e) => {
